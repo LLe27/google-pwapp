@@ -1,6 +1,7 @@
 ## google-pwapp
 A fast, reliable, integrated and engaging pwapp developed using Google's code labs documentation.
 
+### Basic Offline Experience
 #### Progressive Web App techniques:
 - Use responsive design, so it works on both desktop and mobile.
 - Be fast, using a service worker to precache the app resources (HTML, CSS, Javascript, images, etc) needed to run, and cache the weather data at runtime to improve performance.
@@ -39,6 +40,9 @@ The `fetch` handler only needs to handle page navigations, so other requests can
 - If multiple windows to your app are open, a new service worker will not take effect until all windows have been reloaded and updated to the latest service worker.
 - Unreigstering a service worker does not clear the cache!
 - If a service worker exsists and a new service worker is registered, the new service worker won't take control until the page is reloaded, unless you [take immediate control](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim).
+
+### Full Offline Experience
+> Designing for offline-first can drastically improve the performance of your web app by reducing the number of network requests made by your app, instead resources can be precached and served directly from the local cache. Even with the fastest network connection, serving from the local cache will be faster!
 
 ###### Code Labs Link
 https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/
